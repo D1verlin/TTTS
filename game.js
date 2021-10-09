@@ -629,6 +629,8 @@ function myfunc() {
 				document.getElementById("btn2").disabled = false;
 				localStorage.scoreX = parseInt(localStorage.scoreX || 0) - 1;
 				localStorage.score0 = parseInt(localStorage.score0 || 0) - 1;
+				score_list(1,'-1');
+				score_list(0,'-1');
 }
 	else {
 
