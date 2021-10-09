@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Documentation TTTS</title>
+	<link rel="stylesheet" type="text/css" href="doc.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Fonts/GeometriaFont.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<header class="topnav" id="myTopnav">
+	<button onclick="SwitchLang()" id="swtich-btn">RU</button>
+	<ul>
+		<a href="#" id="active">Documentation for TTTS</a>
+		<a href="move-options.html">Move options</a>
+	</ul>
+	<a href="index.html">Back</a>
+	<a href="javascript:void(0);" id="icon" onclick="menu()">
+  	</a>
+</header>
+<main id="markdown-en">
+<h1>Documentation for TTTS (1.0.1)</h1>
+<h2>Game Modes:</h2>
+<ul>
+<li><p>Standard</p>
+</li>
+<li><p>Classic</p>
+</li>
+<li><p>Random coefficient</p>
+</li>
+<li><p>Large area</p>
+</li>
+<li><p>Time limit</p>
+</li>
+</ul>
+<span class="line"></span>
+<h3>Standard</h3>
+<p>The standard mode is tic-tac-toe, but you get points for combinations. As in other modes, you have the ability to choose the number of rounds.</p>
+<p><a href="move-options.html">Move options</a></p>
+<span class="line"></span>
+<h3>Classic</h3>
+<p>Classic mode is the usual tic-tac-toe, but with the ability to choose the number of rounds.</p>
+<span class="line"></span>
+<h3>Random coefficient</h3>
+<p>The mode Random odds is a tic-tac-toe with combinations from the standard <a href="move-options.html">Move options</a> mode, but here there is a random coefficient by which your points are multiplied at the end of the round (thus, if you are lucky, you can overtake your opponent in points) as in other modes you can choose the number of rounds.  <em>(Questionable) You can also limit the maximum and minimum odds </em>.</p>
+<h3>Large area</h3>
+<p>Large area mode is represented by tic-tac-toe with combinations from the standard <a href="move-options.html">Move options</a> mode but with the ability to select an area larger than the standard 3x3. As in other modes, you can choose the number of rounds.</p>
+<span class="line"></span>
+<h3>Time limit</h3>
+<p>The Time limit mode is represented by tic-tac-toe with combinations from the standard <a href="move-options.html">Move options</a> mode but with a limited time per move (For failure, a player is deducted 1 point every second of thought / The player loses), the time can be set in the settings of a new match. As in other modes, you can choose the number of rounds.</p>
+<span class="line"></span>
+</main>
+<main id="markdown-ru" class="layer-none">
+<h1>Документация для TTTS (1.0.1)</h1>
+<h2>Игровые режимы:</h2>
+<ul>
+<li><p>Стандарт</p>
+</li>
+<li><p>Классический</p>
+</li>
+<li><p>Случайный коэффициент</p>
+</li>
+<li><p>Большая территория</p>
+</li>
+<li><p>Временной лимит</p>
+</li>
+</ul>
+<span class="line"></span>
+<h3>Стандарт</h3>
+<p>Стандартый режим представляет собой крестики нолики но за комбинации вы получаете очки.Как и вдругих режимах у вас есть возможность выбирать количество раундов.</p>
+<p><a href="move-options.html">Move options</a></p>
+<span class="line"></span>
+<h3 id="-">Классический</h3>
+<p>Класический режим представляет собой обычные крестики нолики но с возможность выбрать количество раундов.</p>
+<span class="line"></span>
+<h3>Случайный коэффициент</h3>
+<p>Режим Рандомный коэффициент представляет собой крестики нолики с комбинациями из стандартного режима <a href="move-options.html">Move options</a> но здесь существует рандомный коэффициент на который множестся ваши очки в конце раунда (тем самым если вам повезёт то вы можете обогнать соперника по очкам) как и вдругих режимах в можете выбирать количество раундов. <em>(Под вопросом) Так же вы можете ограничеть максимальный и минимальный коэффициент</em>.</p>
+<span class="line"></span>
+<h3>Большая территория</h3>
+<p>Режим Большая территория представляет собой крестики нолики с комбинациями из стандартного режима <a href="move-options.html">Move options</a> но с возможностью выбрать территорию больше чем стандартный 3x3. Как и вдругих режимах в можете выбирать количество раундовю.</p>
+<span class="line"></span>
+<h3>Временной лимит</h3>
+<p>Режим Временной лимит редставляет собой крестики нолики с комбинациями из стандартного режима <a href="move-options.html">Move options</a> но с ограниченым временем на ход ( За провал с игрока снимаются 1 поинт каждую секунду раздумий / Игрок проигрывает ), время можно выставлять в настройках нового матча. Как и вдругих режимах в можете выбирать количество раундовю.</p>
+<span class="line"></span>
+</main>
+<script>
+	let toggle = 0;
+	function SwitchLang() {
+		if (toggle === 0) {
+			toggle = 1;
+			document.querySelector('#swtich-btn').innerHTML = "EN";
+			document.querySelector('#markdown-ru').classList.add("layer-flex");
+			document.querySelector('#markdown-ru').classList.remove("layer-none");
+			document.querySelector('#markdown-en').classList.add("layer-none");
+		} else {
+			toggle = 0;
+			document.querySelector('#swtich-btn').innerHTML = "RU";
+			document.querySelector('#markdown-en').classList.add("layer-flex");
+			document.querySelector('#markdown-en').classList.remove("layer-none");
+			document.querySelector('#markdown-ru').classList.add("layer-none");
+		}
+	}
+
+function menu() {
+	document.getElementById('icon').classList.toggle("icon-close");
+	  var x = document.getElementById("myTopnav");
+	  
+	  if (x.className === "topnav") {
+	    x.className += " responsive";
+	    
+	  } else {
+	    x.className = "topnav";
+	  }
+	}
+</script>
+</body>
+</html>
