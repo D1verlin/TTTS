@@ -452,7 +452,7 @@ function myfunc() {
 	 if ((b5 == 'x' || b5 == 'X') && (b9 == 'x' || b9 == 'X') && (twocells[13].status != 1)) {
 		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +2;
 		score_list(1,'+2');
-		twocells[6].status = 1;
+		twocells[13].status = 1;
 		document.getElementById('print').innerHTML = flags();
 	}
 	 if ((b4 == 'x' || b4 == 'X') && (b8 == 'x' || b8 == 'X') && (twocells[14].status != 1)) {
@@ -575,7 +575,7 @@ function myfunc() {
 	 if ((b5 == '0' || b5 == '0') && (b9 == '0' || b9 == '0') && (twocells[13].status != 1)) {
 		localStorage.score0 = parseInt(localStorage.score0 || 0) +2;
 		score_list(0,'+2');
-		twocells[6].status = 1;
+		twocells[13].status = 1;
 		document.getElementById('print').innerHTML = flags();
 	}
 	 if ((b4 == '0' || b4 == '0') && (b8 == '0' || b8 == '0') && (twocells[14].status != 1)) {
@@ -718,8 +718,8 @@ function Next_Round() {
 function Final() { 
 	const scoreXn = localStorage.getItem('scoreX');
 	const score0n = localStorage.getItem('score0');
-	const Player_X = localStorage.key('scoreX');
-	const Player_0 = localStorage.key('score0');
+	const Player_One = localStorage.key('scoreX');
+	const Player_Two = localStorage.key('score0');
 	document.getElementById("b1").disabled = true;
 	document.getElementById("b2").disabled = true;
 	document.getElementById("b3").disabled = true;		
@@ -730,8 +730,8 @@ function Final() {
 	document.getElementById("b8").disabled = true;
 	document.getElementById("b9").disabled = true;
 	const numbers = {
-	  Player_X: scoreXn,
-	  Player_0: score0n
+	  Player_One: scoreXn,
+	  Player_Two: score0n
 	}
  	
 	document.getElementById('round_score').innerHTML = 'Winner' + ' ' + Object.entries(numbers).reduce((a, b) => a[1] > b[1] ? a : b);
