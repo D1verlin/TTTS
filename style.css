@@ -325,6 +325,7 @@ input[type="radio"]{
   text-align: center;
   font-size: 40px;
   font-weight: 300;
+  cursor: pointer;
 }
 
 .button-group {
@@ -417,7 +418,16 @@ input[type="radio"]{
 }
 
 .not-ready {
-	display: none;
+	opacity: 40%;
+}
+
+#turns {
+	width: fit-content;
+  padding: 10px;
+  background: var(--bg-secondry);
+  border: var(--border-default);
+  border-radius: 10px;
+  text-align-last: center;
 }
 
 @media screen and (max-width: 768px) {

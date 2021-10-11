@@ -8,7 +8,7 @@ Tic-Tac-Toe grid
 */
 
 let flag = "X";
-const flags = () => `It's ${flag}'s turn`;
+const flags = () => `${flag}`;
 
 	const twocells = [
 	{ "id":0, "status":0 },
@@ -120,6 +120,7 @@ function Start() {
 				.innerHTML = flags();
 		}
 }
+
 
 // Function called whenever user tab on any box
 function myfunc() {
@@ -682,6 +683,7 @@ function Next_Round() {
 	document.getElementById("b7").value = '';
 	document.getElementById("b8").value = '';
 	document.getElementById("b9").value = '';
+
 	document.getElementById("b1").disabled = false;
 	document.getElementById("b2").disabled = false;
 	document.getElementById("b3").disabled = false;		
@@ -691,6 +693,17 @@ function Next_Round() {
 	document.getElementById("b7").disabled = false;
 	document.getElementById("b8").disabled = false;
 	document.getElementById("b9").disabled = false;
+
+	document.getElementById("b1").style = '';
+	document.getElementById("b2").style = '';
+	document.getElementById("b3").style = '';		
+	document.getElementById("b4").style = '';
+	document.getElementById("b5").style = '';
+	document.getElementById("b6").style = '';
+	document.getElementById("b7").style = '';
+	document.getElementById("b8").style = '';
+	document.getElementById("b9").style = '';
+	
 	document.getElementById("btn2").disabled = true;
 	twocells_reset();
 	document.querySelector('#scoreX_list').innerHTML = '';
@@ -709,7 +722,7 @@ function Next_Round() {
 			document.getElementById('print')
 				.innerHTML = flags();
 		}
-	if (localStorage.round_score > localStorage.round_max) {
+	if (Number(localStorage.round_score) > Number(localStorage.round_max)) {
 		Final();
 }
 	
@@ -733,9 +746,11 @@ function Final() {
 	  Player_One: scoreXn,
 	  Player_Two: score0n
 	}
- 	
+ 	if (scoreXn === score0n) {
+ 		document.getElementById('round_score').innerHTML = '0:0 😐'
+ 	} else {
 	document.getElementById('round_score').innerHTML = 'Winner' + ' ' + Object.entries(numbers).reduce((a, b) => a[1] > b[1] ? a : b);
-
+	}
 }
 
 function CheckScore() {
@@ -750,11 +765,15 @@ function CheckScore() {
 function CheckTurn(id){
 if (flag == "X") {
 document.getElementById(id).value = "X";
+document.getElementById(id).style.borderColor = 'var(--red)';
+document.getElementById(id).style.color = 'var(--red)';
 document.getElementById(id).disabled = true;
 flag = "0";
 }
 else {
 document.getElementById(id).value = "0";
+document.getElementById(id).style.borderColor = 'var(--green)';
+document.getElementById(id).style.color = 'var(--green)';
 document.getElementById(id).disabled = true;
 flag = "X";
 }

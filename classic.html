@@ -18,8 +18,8 @@
 <div class="gamemode">
 	<h2>Game modes:</h2>
 <div class="wrapper">
- <input type="radio" onclick="gamemods_check()" name="gamemods" id="option-1" checked>
- <input type="radio" onclick="gamemods_check()" name="gamemods" id="option-2">
+ <input type="radio" onclick="gamemods_check()" name="gamemods" id="option-1" >
+ <input type="radio" onclick="gamemods_check()" name="gamemods" checked id="option-2">
  <input type="radio" onclick="gamemods_check()" name="gamemods" disabled id="option-3">
  <input type="radio" onclick="gamemods_check()" name="gamemods" disabled id="option-4">
  <input type="radio" onclick="gamemods_check()" name="gamemods" disabled id="option-5">
@@ -129,7 +129,7 @@
 		<button id="btn2" onclick="Next_Round()" disabled>Next Round</button>
 	</div>
 </main>
-<script id="script" src="standart.js"></script>
+<script id="script" src="classic.js"></script>
 <script>
 		let toggle = 0;
 	function SwitchLayer() {
@@ -183,11 +183,11 @@
 	function gamemods_check() {
 	let gamemods = document.getElementsByName('gamemods');
 	if (gamemods[0].checked === true) {
-		
+		window.location = 'index.html';
 
 	}
 	if (gamemods[1].checked === true) {
-		window.location = 'classic.html';
+
 	}
 	if (gamemods[2].checked === true) {
 		window.location = 'random_coef.html';
