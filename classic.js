@@ -388,14 +388,14 @@ function myfunc() {
 	else {
 
 		// Here, Printing Result
-		if (flag == "X") {
-			
-			document.getElementById('print')
-				.innerHTML = flags();
+		if (flag == "X") {			
+			document.getElementById('print').innerHTML = flags();
+			document.getElementById('print').style.color = 'var(--red)';
 		}
 		else {
-			document.getElementById('print')
-				.innerHTML = flags();
+			document.getElementById('print').innerHTML = flags();
+			document.getElementById('print').style.color = 'var(--green)';
+
 		}
 	}
 }
@@ -465,14 +465,14 @@ function Next_Round() {
 	document.getElementById('scoreX').innerHTML = localStorage.scoreX;
 	document.getElementById('score0').innerHTML = localStorage.score0;
 		// Here, Printing Result
-		if (flag == "X") {
-			
-			document.getElementById('print')
-				.innerHTML = flags();
+		if (flag == "X") {			
+			document.getElementById('print').innerHTML = flags();
+			document.getElementById('print').style.color = 'var(--red)';
 		}
 		else {
-			document.getElementById('print')
-				.innerHTML = flags();
+			document.getElementById('print').innerHTML = flags();
+			document.getElementById('print').style.color = 'var(--green)';
+
 		}
 	if (Number(localStorage.round_score) > Number(localStorage.round_max)) {
 		Final();
