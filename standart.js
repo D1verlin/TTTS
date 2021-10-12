@@ -9,7 +9,15 @@ Tic-Tac-Toe grid
 
 let flag = "X";
 const flags = () => `${flag}`;
+		if (flag == "X") {			
+			document.getElementById('print').innerHTML = flags();
+			document.getElementById('print').style.color = 'var(--red)';
+		}
+		else {
+			document.getElementById('print').innerHTML = flags();
+			document.getElementById('print').style.color = 'var(--green)';
 
+		}
 	const twocells = [
 	{ "id":0, "status":0 },
 	{ "id":1, "status":0 },
@@ -712,6 +720,7 @@ function Next_Round() {
 	document.getElementById('round_score').innerHTML = 'Round ' + localStorage.round_score;
 	document.getElementById('scoreX').innerHTML = localStorage.scoreX;
 	document.getElementById('score0').innerHTML = localStorage.score0;
+	flag = "X"
 		// Here, Printing Result
 		if (flag == "X") {			
 			document.getElementById('print').innerHTML = flags();

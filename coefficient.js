@@ -9,6 +9,15 @@ Tic-Tac-Toe grid
 
 let flag = "X";
 const flags = () => `${flag}`;
+		if (flag == "X") {			
+			document.getElementById('print').innerHTML = flags();
+			document.getElementById('print').style.color = 'var(--red)';
+		}
+		else {
+			document.getElementById('print').innerHTML = flags();
+			document.getElementById('print').style.color = 'var(--green)';
+
+		}
 let input_coefmin = document.querySelector('#coefmin');
 let input_coefmax = document.querySelector('#coefmax');
 localStorage.setItem('min', input_coefmin.value);
@@ -745,6 +754,7 @@ function Next_Round() {
 	document.getElementById('round_score').innerHTML = 'Round ' + localStorage.round_score;
 	array_sum_x = [];
 	array_sum_0 = [];
+	flag = "X"
 		// Here, Printing Result
 		if (flag == "X") {			
 			document.getElementById('print').innerHTML = flags();
