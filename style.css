@@ -58,11 +58,11 @@ td {
 	--secondry-color:#6B768C;
 	--red:#FF9797;
 	--green:#B3FFA7;
+	--coef-color: #B2EEB4;
 	--white: #fff;
 	--border-default: 2px solid var(--secondry-color);
 	--header-height: 50px;
 	--size: 350px;
-
 }
 
 * {
@@ -412,6 +412,8 @@ input[type="radio"]{
 	color: var(--green);
 }
 
+
+
 .btn-active {
 		border-color: var(--primary-color) !important;
     color: var(--primary-color)!important;
@@ -422,12 +424,28 @@ input[type="radio"]{
 }
 
 #turns {
-	width: fit-content;
+  width: fit-content;
   padding: 10px;
   background: var(--bg-secondry);
   border: var(--border-default);
-  border-radius: 10px;
+  border-radius: 20px;
   text-align-last: center;
+}
+
+.coef_block {
+	background: radial-gradient(65% 65% at 50% 50%, rgba(178, 238, 180, 0.2) 0%, rgba(81, 91, 112, 0.2) 100%), #414959;
+  border: var(--border-default);
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border-color: var(--coef-color);
+}
+
+.coef_block h1 {
+  color: var(--coef-color);
 }
 
 @media screen and (max-width: 768px) {
