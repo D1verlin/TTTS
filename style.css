@@ -346,6 +346,14 @@ input[type="radio"]{
 	  text-align: center;
 	  font-size: 14px;
 	  font-weight: 300;
+	  cursor: pointer;
+	  transition: 0.3s;
+}
+
+.button-group button:hover {
+	color: var(--bg-secondry);
+	background: var(--primary-color);
+	border-color: var(--primary-color);
 }
 
 .button-group button:disabled {
@@ -384,6 +392,14 @@ input[type="radio"]{
   font-size: 20px;
   border-radius: 10px;
   letter-spacing: 0.13em;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#btn-start:hover {
+	color: var(--bg-secondry);
+	background: var(--primary-color);
+	border-color: var(--primary-color);
 }
 
 #scoreX_list li {background:var(--red);}
@@ -448,8 +464,32 @@ input[type="radio"]{
   color: var(--coef-color);
 }
 
-@media screen and (max-width: 768px) {
+.print-zone {
+	display: flex;
+	justify-content: space-between;
+}
 
+#warning {
+	color: var(--red);
+	font-size: 14px;
+  letter-spacing: 0.03em;
+  cursor: help;
+}
+
+#clock {
+ 	background: var(--primary-color);
+  padding: 5px 10px 5px 10px;
+  border-radius: 32px;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (min-width: 768px) {
+	.grid {
+		flex-direction: row;
+	}
 }
 
 @media screen and (min-width: 470px) {
