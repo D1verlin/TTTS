@@ -752,6 +752,7 @@ function myfunc() {
 				score_list(1,'-1');
 				score_list(0,'-1');
 				clearInterval(interval);
+				
 }
 	else {
 
@@ -759,11 +760,14 @@ function myfunc() {
 		if (flag == "X") {			
 			document.getElementById('print').innerHTML = flags();
 			document.getElementById('print').style.color = 'var(--red)';
+			clearInterval(interval);
+			TimerStart();
 		}
 		else {
 			document.getElementById('print').innerHTML = flags();
 			document.getElementById('print').style.color = 'var(--green)';
-
+			clearInterval(interval);
+			TimerStart();
 		}
 	}
 }
