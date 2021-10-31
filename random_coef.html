@@ -78,6 +78,17 @@
 	<input type="number" id="coefmax" name="maxcof" min="1" value="10"></span></ul>
 </div>
 </div>
+<div class="other_s">
+	<h2>Other settings:</h2>
+	<nav>
+	<label class="other_radio">Auto-Round
+  <input type="checkbox" class="other_elm" id="auto_round" onclick="checkbox_checked()">
+</label>
+	<label class="other_radio">My Turn
+  <input type="checkbox" class="other_elm" id="my_turn" onclick="checkbox_checked()">
+</label>	
+	</nav>
+</div>
 <button id="btn-start" onclick="SwitchLayer(); Start()">Start</button>
 </main>
 <main id="game" class="layer-none">

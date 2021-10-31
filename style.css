@@ -78,15 +78,19 @@ a {
 
 body {
 	background:var(--bg);
-	padding: 20px;
+	padding: 15px;
 }
 
 header {
-	padding-top: 20px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 6px 6px 7px 0px rgb(65 73 89 / 30%);
+    border-radius: 10px;
+    background: var(--bg-secondry);
 }
 
 h1 {
@@ -156,6 +160,7 @@ main {
 	font-weight: 500;
 	line-height: 20px;
 	color: var(--white);
+	box-shadow: 6px 6px 7px 0px rgb(65 73 89 / 30%);
 
 }
 
@@ -198,6 +203,7 @@ h2 {
     background: var(--bg-secondry);
     border: var(--border-default);
     transition: all 0.3s ease;
+    box-shadow: 6px 6px 7px 0px rgb(65 73 89 / 30%);
 }
 .wrapper .option .dot{
   height: 20px;
@@ -279,6 +285,7 @@ input[type="radio"]{
     color: var(--primary-color);
     font-size: 17px;
     width: 150px;
+    box-shadow: 6px 6px 7px 0px rgb(65 73 89 / 30%);
 }
 
 .coefficient input {
@@ -484,7 +491,53 @@ input[type="radio"]{
   font-size: 16px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
+
+.other_s {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: flex-start;
+  background: var(--bg-secondry);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 7px 0px rgb(65 73 89 / 30%);
+}
+
+.other_s nav {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.other_radio {
+	padding: 10px;
+	background: var(--bg-secondry);
+	border: var(--border-default);
+	border-radius: 10px;
+	transition: 0.3s;
+	cursor: pointer;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: var(--white);
+}
+
+
+.other_radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+
 
 @media screen and (min-width: 768px) {
 	.grid {

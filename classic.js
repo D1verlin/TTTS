@@ -7,6 +7,47 @@ Tic-Tac-Toe grid
 
 */
 
+// Start Other-Settings
+
+
+function checkbox_checked() {
+	let checkbox = document.querySelectorAll('.other_elm');
+	let togglebtn = document.querySelectorAll('.other_radio');
+	
+	if ( checkbox[0].checked == true ) {
+		// console.log(checkbox[0] , 'Checked!');
+		togglebtn[0].classList.add('btn-active');
+		localStorage.setItem('Auto_Round', true);
+	} else if ( checkbox[0].checked == false ) {
+		// console.log(checkbox[0] , 'Unchecked!');
+		togglebtn[0].classList.remove('btn-active');
+		localStorage.setItem('Auto_Round', false);
+	}
+
+	if ( checkbox[1].checked == true ) {
+		// console.log(checkbox[1] , 'Checked!');
+		togglebtn[1].classList.add('btn-active');
+		localStorage.setItem('my_turn', true);
+	} else if ( checkbox[1].checked == false ) {
+		// console.log(checkbox[1] , 'Unchecked!');
+		togglebtn[1].classList.remove('btn-active');
+		localStorage.setItem('my_turn', false);
+	}
+
+}
+
+
+function Auto_Round() {
+	if (localStorage.Auto_Round == 'true') {
+		Next_Round();
+	}
+}
+
+
+
+
+// End Other-Settings
+
 let flag = "X";
 const flags = () => `${flag}`;
 		if (flag == "X") {			
@@ -97,6 +138,8 @@ window.onload = function() {
 	document.getElementById("b7").disabled = true;
 	document.getElementById("b8").disabled = true;
 	document.getElementById("b9").disabled = true;
+	localStorage.setItem('Auto_Round', false);
+	localStorage.setItem('my_turn', false);
 	
 }
 
@@ -162,6 +205,7 @@ function myfunc() {
 		document.getElementById("b7").disabled = true;
 		document.getElementById("b8").disabled = true;
 		document.getElementById("b9").disabled = true;
+		Auto_Round();
 	}
 	else if ((b1 == 'x' || b1 == 'X') && (b4 == 'x' ||
 		b4 == 'X') && (b7 == 'x' || b7 == 'X')) {
@@ -176,6 +220,7 @@ function myfunc() {
 		document.getElementById("b6").disabled = true;
 		document.getElementById("b8").disabled = true;
 		document.getElementById("b9").disabled = true;
+		Auto_Round();
 
 	}
 	else if ((b7 == 'x' || b7 == 'X') && (b8 == 'x' ||
@@ -191,6 +236,7 @@ function myfunc() {
 		document.getElementById("b4").disabled = true;
 		document.getElementById("b5").disabled = true;
 		document.getElementById("b6").disabled = true;
+		Auto_Round();
 	}
 	else if ((b3 == 'x' || b3 == 'X') && (b6 == 'x' ||
 		b6 == 'X') && (b9 == 'x' || b9 == 'X')) {
@@ -205,6 +251,7 @@ function myfunc() {
 		document.getElementById("b5").disabled = true;
 		document.getElementById("b7").disabled = true;
 		document.getElementById("b8").disabled = true;
+		Auto_Round();
 	}
 	else if ((b1 == 'x' || b1 == 'X') && (b5 == 'x' ||
 		b5 == 'X') && (b9 == 'x' || b9 == 'X')) {
@@ -219,6 +266,7 @@ function myfunc() {
 		document.getElementById("b6").disabled = true;
 		document.getElementById("b7").disabled = true;
 		document.getElementById("b8").disabled = true;
+		Auto_Round();
 	}
 	else if ((b3 == 'x' || b3 == 'X') && (b5 == 'x' ||
 		b5 == 'X') && (b7 == 'x' || b7 == 'X')) {
@@ -233,6 +281,7 @@ function myfunc() {
 		document.getElementById("b6").disabled = true;
 		document.getElementById("b8").disabled = true;
 		document.getElementById("b9").disabled = true;
+		Auto_Round();
 	}
 	else if ((b2 == 'x' || b2 == 'X') && (b5 == 'x' ||
 		b5 == 'X') && (b8 == 'x' || b8 == 'X')) {
@@ -247,6 +296,7 @@ function myfunc() {
 		document.getElementById("b6").disabled = true;
 		document.getElementById("b7").disabled = true;
 		document.getElementById("b9").disabled = true;
+		Auto_Round();
 	}
 	else if ((b4 == 'x' || b4 == 'X') && (b5 == 'x' ||
 		b5 == 'X') && (b6 == 'x' || b6 == 'X')) {
@@ -261,6 +311,7 @@ function myfunc() {
 		document.getElementById("b7").disabled = true;
 		document.getElementById("b8").disabled = true;
 		document.getElementById("b9").disabled = true;
+		Auto_Round();
 	}	
 
 	// Checking of Player X finsh
@@ -279,6 +330,7 @@ function myfunc() {
 		document.getElementById("b7").disabled = true;
 		document.getElementById("b8").disabled = true;
 		document.getElementById("b9").disabled = true;
+		Auto_Round();
 	}
 	else if ((b1 == '0' || b1 == '0') && (b4 == '0' ||
 		b4 == '0') && (b7 == '0' || b7 == '0')) {
@@ -293,6 +345,7 @@ function myfunc() {
 		document.getElementById("b6").disabled = true;
 		document.getElementById("b8").disabled = true;
 		document.getElementById("b9").disabled = true;
+		Auto_Round();
 	}
 	else if ((b7 == '0' || b7 == '0') && (b8 == '0' ||
 		b8 == '0') && (b9 == '0' || b9 == '0')) {
@@ -307,6 +360,7 @@ function myfunc() {
 		document.getElementById("b4").disabled = true;
 		document.getElementById("b5").disabled = true;
 		document.getElementById("b6").disabled = true;
+		Auto_Round();
 	}
 	else if ((b3 == '0' || b3 == '0') && (b6 == '0' ||
 		b6 == '0') && (b9 == '0' || b9 == '0')) {
@@ -321,6 +375,7 @@ function myfunc() {
 		document.getElementById("b5").disabled = true;
 		document.getElementById("b7").disabled = true;
 		document.getElementById("b8").disabled = true;
+		Auto_Round();
 	}
 	else if ((b1 == '0' || b1 == '0') && (b5 == '0' ||
 		b5 == '0') && (b9 == '0' || b9 == '0')) {
@@ -335,6 +390,7 @@ function myfunc() {
 		document.getElementById("b6").disabled = true;
 		document.getElementById("b7").disabled = true;
 		document.getElementById("b8").disabled = true;
+		Auto_Round();
 	}
 	else if ((b3 == '0' || b3 == '0') && (b5 == '0' ||
 		b5 == '0') && (b7 == '0' || b7 == '0')) {
@@ -349,6 +405,7 @@ function myfunc() {
 		document.getElementById("b6").disabled = true;
 		document.getElementById("b8").disabled = true;
 		document.getElementById("b9").disabled = true;
+		Auto_Round();
 	}
 	else if ((b2 == '0' || b2 == '0') && (b5 == '0' ||
 		b5 == '0') && (b8 == '0' || b8 == '0')) {
@@ -363,6 +420,7 @@ function myfunc() {
 		document.getElementById("b6").disabled = true;
 		document.getElementById("b7").disabled = true;
 		document.getElementById("b9").disabled = true;
+		Auto_Round();
 	}
 	else if ((b4 == '0' || b4 == '0') && (b5 == '0' ||
 		b5 == '0') && (b6 == '0' || b6 == '0')) {
@@ -377,6 +435,7 @@ function myfunc() {
 		document.getElementById("b7").disabled = true;
 		document.getElementById("b8").disabled = true;
 		document.getElementById("b9").disabled = true;
+		Auto_Round();
 	}
 
 	// Checking of Player 0 finsh
@@ -392,6 +451,7 @@ function myfunc() {
 				document.getElementById("btn2").disabled = false;
 				score_list(1,'Tie');
 				score_list(0,'Tie');
+				Auto_Round();
 }
 	else {
 
@@ -468,11 +528,21 @@ function Next_Round() {
 	twocells_reset();
 	document.querySelector('#scoreX_list').innerHTML = '';
 	document.querySelector('#score0_list').innerHTML = '';
+	function clearlist() {
+	document.querySelector('#scoreX_list').innerHTML = '';
+	document.querySelector('#score0_list').innerHTML = '';
+	}
+	setTimeout(clearlist,0001);
 	localStorage.round_score = parseInt(localStorage.round_score || 0) + 1;
 	document.getElementById('round_score').innerHTML = 'Round ' + localStorage.round_score;
 	document.getElementById('scoreX').innerHTML = localStorage.scoreX;
 	document.getElementById('score0').innerHTML = localStorage.score0;
-	flag = "X"
+	if (localStorage.my_turn == 'true') {
+
+	} else {
+		flag = "X";
+	}
+	
 		// Here, Printing Result
 		if (flag == "X") {			
 			document.getElementById('print').innerHTML = flags();
