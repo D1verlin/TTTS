@@ -295,6 +295,9 @@ function myfunc() {
 		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
 		score_list(1,'+3');
 		clearInterval(interval);
+		document.getElementById("b1").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b2").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b3").style.boxShadow = '0px 0px 15px 0px var(--red)';
 		document.getElementById("b4").disabled = true;
 		document.getElementById("b5").disabled = true;
 		document.getElementById("b6").disabled = true;
@@ -311,6 +314,9 @@ function myfunc() {
 		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
 		score_list(1,'+3');
 		clearInterval(interval);
+		document.getElementById("b1").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b4").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b7").style.boxShadow = '0px 0px 15px 0px var(--red)';
 		document.getElementById("b2").disabled = true;
 		document.getElementById("b3").disabled = true;
 		document.getElementById("b5").disabled = true;
@@ -328,6 +334,9 @@ function myfunc() {
 		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
 		score_list(1,'+3');
 		clearInterval(interval);
+		document.getElementById("b7").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b8").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b9").style.boxShadow = '0px 0px 15px 0px var(--red)';
 		document.getElementById("b1").disabled = true;
 		document.getElementById("b2").disabled = true;
 		document.getElementById("b3").disabled = true;
@@ -344,6 +353,9 @@ function myfunc() {
 		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
 		score_list(1,'+3');
 		clearInterval(interval);
+		document.getElementById("b3").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b6").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b9").style.boxShadow = '0px 0px 15px 0px var(--red)';
 		document.getElementById("b1").disabled = true;
 		document.getElementById("b2").disabled = true;
 		document.getElementById("b4").disabled = true;
@@ -360,6 +372,9 @@ function myfunc() {
 		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
 		score_list(1,'+3');
 		clearInterval(interval);
+		document.getElementById("b1").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b5").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b9").style.boxShadow = '0px 0px 15px 0px var(--red)';
 		document.getElementById("b2").disabled = true;
 		document.getElementById("b3").disabled = true;
 		document.getElementById("b4").disabled = true;
@@ -376,6 +391,9 @@ function myfunc() {
 		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
 		score_list(1,'+3');
 		clearInterval(interval);
+		document.getElementById("b3").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b5").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b7").style.boxShadow = '0px 0px 15px 0px var(--red)';
 		document.getElementById("b1").disabled = true;
 		document.getElementById("b2").disabled = true;
 		document.getElementById("b4").disabled = true;
@@ -392,6 +410,9 @@ function myfunc() {
 		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
 		score_list(1,'+3');
 		clearInterval(interval);
+		document.getElementById("b2").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b5").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b8").style.boxShadow = '0px 0px 15px 0px var(--red)';
 		document.getElementById("b1").disabled = true;
 		document.getElementById("b3").disabled = true;
 		document.getElementById("b4").disabled = true;
@@ -408,6 +429,9 @@ function myfunc() {
 		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
 		score_list(1,'+3');
 		clearInterval(interval);
+		document.getElementById("b4").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b5").style.boxShadow = '0px 0px 15px 0px var(--red)';
+		document.getElementById("b6").style.boxShadow = '0px 0px 15px 0px var(--red)';
 		document.getElementById("b1").disabled = true;
 		document.getElementById("b2").disabled = true;
 		document.getElementById("b3").disabled = true;
@@ -428,6 +452,9 @@ function myfunc() {
 		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
 		score_list(0,'+3');
 		clearInterval(interval);
+		document.getElementById("b1").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b2").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b3").style.boxShadow = '0px 0px 15px 0px var(--green)';
 		document.getElementById("b4").disabled = true;
 		document.getElementById("b5").disabled = true;
 		document.getElementById("b6").disabled = true;
@@ -444,6 +471,9 @@ function myfunc() {
 		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
 		score_list(0,'+3');
 		clearInterval(interval);
+		document.getElementById("b1").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b4").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b7").style.boxShadow = '0px 0px 15px 0px var(--green)';
 		document.getElementById("b2").disabled = true;
 		document.getElementById("b3").disabled = true;
 		document.getElementById("b5").disabled = true;
@@ -460,6 +490,9 @@ function myfunc() {
 		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
 		score_list(0,'+3');
 		clearInterval(interval);
+		document.getElementById("b7").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b8").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b9").style.boxShadow = '0px 0px 15px 0px var(--green)';
 		document.getElementById("b1").disabled = true;
 		document.getElementById("b2").disabled = true;
 		document.getElementById("b3").disabled = true;
@@ -476,6 +509,9 @@ function myfunc() {
 		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
 		score_list(0,'+3');
 		clearInterval(interval);
+		document.getElementById("b3").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b6").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b9").style.boxShadow = '0px 0px 15px 0px var(--green)';
 		document.getElementById("b1").disabled = true;
 		document.getElementById("b2").disabled = true;
 		document.getElementById("b4").disabled = true;
@@ -492,6 +528,9 @@ function myfunc() {
 		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
 		score_list(0,'+3');
 		clearInterval(interval);
+		document.getElementById("b1").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b5").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b9").style.boxShadow = '0px 0px 15px 0px var(--green)';
 		document.getElementById("b2").disabled = true;
 		document.getElementById("b3").disabled = true;
 		document.getElementById("b4").disabled = true;
@@ -508,6 +547,9 @@ function myfunc() {
 		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
 		score_list(0,'+3');
 		clearInterval(interval);
+		document.getElementById("b3").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b5").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b7").style.boxShadow = '0px 0px 15px 0px var(--green)';
 		document.getElementById("b1").disabled = true;
 		document.getElementById("b2").disabled = true;
 		document.getElementById("b4").disabled = true;
@@ -524,6 +566,9 @@ function myfunc() {
 		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
 		score_list(0,'+3');
 		clearInterval(interval);
+		document.getElementById("b2").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b5").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b8").style.boxShadow = '0px 0px 15px 0px var(--green)';
 		document.getElementById("b1").disabled = true;
 		document.getElementById("b3").disabled = true;
 		document.getElementById("b4").disabled = true;
@@ -540,6 +585,9 @@ function myfunc() {
 		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
 		score_list(0,'+3');
 		clearInterval(interval);
+		document.getElementById("b4").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b5").style.boxShadow = '0px 0px 15px 0px var(--green)';
+		document.getElementById("b6").style.boxShadow = '0px 0px 15px 0px var(--green)';
 		document.getElementById("b1").disabled = true;
 		document.getElementById("b2").disabled = true;
 		document.getElementById("b3").disabled = true;

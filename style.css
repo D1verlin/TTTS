@@ -31,6 +31,7 @@ button, fieldset, iframe {
 
 fieldset, ul, ol, button, menu {
   padding: 0;
+  cursor: pointer;
 }
 
 ol, ul {
@@ -384,7 +385,7 @@ input[type="radio"]{
 }
 
 .box-score li {
-  padding: 5px;
+  padding: 4px;
   border-radius: 30px;
 }
 
@@ -478,9 +479,10 @@ input[type="radio"]{
 
 #warning {
 	color: var(--red);
-	font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.03em;
   cursor: help;
+  font-weight: 300;
 }
 
 #clock {
@@ -537,7 +539,11 @@ input[type="radio"]{
   width: 0;
 }
 
-
+.VER_4x4 {
+	width: 70px;
+	height: 70px;
+	font-size: 32px;
+}
 
 @media screen and (min-width: 768px) {
 	.grid {
@@ -547,7 +553,7 @@ input[type="radio"]{
 
 @media screen and (min-width: 470px) {
 	#game {
-		width: 420px;
+		width: 380px;
 	}
 }
 

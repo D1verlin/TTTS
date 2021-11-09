@@ -21,7 +21,7 @@
  <input type="radio" onclick="gamemods_check()" name="gamemods" id="option-1">
  <input type="radio" onclick="gamemods_check()" name="gamemods" id="option-2">
  <input type="radio" onclick="gamemods_check()" name="gamemods" id="option-3">
- <input type="radio" onclick="gamemods_check()" name="gamemods" disabled id="option-4">
+ <input type="radio" onclick="gamemods_check()" name="gamemods" id="option-4">
  <input type="radio" onclick="gamemods_check()" name="gamemods" checked id="option-5">
    <label for="option-1" class="option option-1">
      <div class="dot"></div>
@@ -35,7 +35,7 @@
      <div class="dot"></div>
       <span>Random coefficient</span>
    </label>
-   <label for="option-4" class="not-ready option option-4">
+   <label for="option-4" class=" option option-4">
      <div class="dot"></div>
       <span>Large area</span>
    </label>
@@ -59,10 +59,7 @@
 <div class="area not-ready">
 	<h2>Area:</h2>
 	<ul>
-	<button onclick="area_select(1);btn_checker()">1</button>
-	<button onclick="area_select(5);btn_checker()">5</button>
-	<button onclick="area_select(10);btn_checker()">10</button>
-	<button onclick="area_select(20);btn_checker()">20</button>
+	<button class="btn-active" onclick="area_select(1);btn_checker()">4x4</button>
 	</ul>
 </div>
 <div class="time">
