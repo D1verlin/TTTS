@@ -98,7 +98,49 @@ const flags = () => `${flag}`;
 	{ "id":35, "status":0 },
 	{ "id":36, "status":0 },
 	{ "id":37, "status":0 }
-];
+]
+
+	const thirdcells = [
+	{ "id":0, "status":0 },
+	{ "id":1, "status":0 },
+	{ "id":2, "status":0 },
+	{ "id":3, "status":0 },
+	{ "id":4, "status":0 },
+	{ "id":5, "status":0 },
+	{ "id":6, "status":0 },
+	{ "id":7, "status":0 },
+	{ "id":8, "status":0 },
+	{ "id":9, "status":0 },
+	{ "id":10, "status":0 },
+	{ "id":11, "status":0 }, 
+	{ "id":12, "status":0 },
+	{ "id":13, "status":0 },
+	{ "id":14, "status":0 },
+	{ "id":15, "status":0 },
+	{ "id":16, "status":0 },
+	{ "id":17, "status":0 },
+	{ "id":18, "status":0 },
+	{ "id":19, "status":0 },
+	{ "id":20, "status":0 },
+	{ "id":21, "status":0 },
+	{ "id":22, "status":0 },
+	{ "id":23, "status":0 },
+	{ "id":24, "status":0 },
+	{ "id":25, "status":0 },
+	{ "id":26, "status":0 },
+	{ "id":27, "status":0 },
+	{ "id":28, "status":0 },
+	{ "id":29, "status":0 },
+	{ "id":30, "status":0 },
+	{ "id":31, "status":0 },
+	{ "id":32, "status":0 },
+	{ "id":33, "status":0 },
+	{ "id":34, "status":0 },
+	{ "id":35, "status":0 },
+	{ "id":36, "status":0 },
+	{ "id":37, "status":0 }
+]
+;
 
 function twocells_reset() {
 	twocells[0].status = 0;
@@ -1303,6 +1345,348 @@ function myfunc() {
 		document.getElementById('print').innerHTML = flags();
 	}
 
+	// Third type of combination [ X ] thirdcells
+
+	if ((b1 == 'x' || b1 == 'X') && (b2 == 'x' ||
+		b2 == 'X') && (b3 == 'x' || b3 == 'X') && (thirdcells[0].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[0].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+	if ((b1 == 'x' || b1 == 'X') && (b4 == 'x' ||
+		b4 == 'X') && (b7 == 'x' || b7 == 'X') && (thirdcells[1].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[1].status = 1;
+		document.getElementById('print').innerHTML = flags();			
+	}
+	if ((b7 == 'x' || b7 == 'X') && (b8 == 'x' ||
+		b8 == 'X') && (b9 == 'x' || b9 == 'X') && (thirdcells[2].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[2].status = 1;
+		document.getElementById('print').innerHTML = flags();			
+	}
+	if ((b3 == 'x' || b3 == 'X') && (b6 == 'x' ||
+		b6 == 'X') && (b9 == 'x' || b9 == 'X') && (thirdcells[3].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[3].status = 1;
+		document.getElementById('print').innerHTML = flags();			
+	}
+	if ((b1 == 'x' || b1 == 'X') && (b5 == 'x' ||
+		b5 == 'X') && (b9 == 'x' || b9 == 'X') && (thirdcells[4].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[4].status = 1;
+		document.getElementById('print').innerHTML = flags();			
+	}
+	if ((b3 == 'x' || b3 == 'X') && (b5 == 'x' ||
+		b5 == 'X') && (b7 == 'x' || b7 == 'X') && (thirdcells[5].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[5].status = 1;
+		document.getElementById('print').innerHTML = flags();			
+	}
+	if ((b2 == 'x' || b2 == 'X') && (b5 == 'x' ||
+		b5 == 'X') && (b8 == 'x' || b8 == 'X') && (thirdcells[6].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[6].status = 1;
+		document.getElementById('print').innerHTML = flags();			
+	}
+	if ((b4 == 'x' || b4 == 'X') && (b5 == 'x' ||
+		b5 == 'X') && (b6 == 'x' || b6 == 'X') && (thirdcells[7].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[7].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}	
+
+	if ((b4 == 'x' || b4 == 'X') && (b7 == 'x' ||
+		b7 == 'X') && (b10 == 'x' || b10 == 'X') && (thirdcells[8].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[8].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b5 == 'x' || b5 == 'X') && (b8 == 'x' ||
+		b8 == 'X') && (b11 == 'x' || b11 == 'X') && (thirdcells[9].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[9].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b6 == 'x' || b6 == 'X') && (b9 == 'x' ||
+		b9 == 'X') && (b12 == 'x' || b12 == 'X') && (thirdcells[10].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[10].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b13 == 'x' || b13 == 'X') && (b14 == 'x' ||
+		b14 == 'X') && (b15 == 'x' || b15 == 'X') && (thirdcells[11].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[11].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b14 == 'x' || b14 == 'X') && (b15 == 'x' ||
+		b15 == 'X') && (b16 == 'x' || b16 == 'X') && (thirdcells[12].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[12].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b10 == 'x' || b10 == 'X') && (b11 == 'x' ||
+		b11 == 'X') && (b12 == 'x' || b12 == 'X') && (thirdcells[13].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[13].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b11 == 'x' || b11 == 'X') && (b12 == 'x' ||
+		b12 == 'X') && (b16 == 'x' || b16 == 'X') && (thirdcells[14].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[14].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b8 == 'x' || b8 == 'X') && (b9 == 'x' ||
+		b9 == 'X') && (b15 == 'x' || b15 == 'X') && (thirdcells[15].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[15].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b5 == 'x' || b5 == 'X') && (b6 == 'x' ||
+		b6 == 'X') && (b14 == 'x' || b14 == 'X') && (thirdcells[16].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[16].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b2 == 'x' || b2 == 'X') && (b3 == 'x' ||
+		b3 == 'X') && (b13 == 'x' || b13 == 'X') && (thirdcells[17].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[17].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b10 == 'x' || b10 == 'X') && (b8 == 'x' ||
+		b8 == 'X') && (b6 == 'x' || b6 == 'X') && (thirdcells[18].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[18].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b11 == 'x' || b11 == 'X') && (b9 == 'x' ||
+		b9 == 'X') && (b14 == 'x' || b14 == 'X') && (thirdcells[19].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[19].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b5 == 'x' || b5 == 'X') && (b9 == 'x' ||
+		b9 == 'X') && (b16 == 'x' || b16 == 'X') && (thirdcells[20].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[20].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b4 == 'x' || b4 == 'X') && (b8 == 'x' ||
+		b8 == 'X') && (b12 == 'x' || b12 == 'X') && (thirdcells[21].status != 1)) {
+		localStorage.scoreX = parseInt(localStorage.scoreX || 0) +3;
+		score_list(1,'+3');
+		thirdcells[21].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	// Third type of combination [ 0 ] thirdcells
+
+	if ((b1 == '0' || b1 == '0') && (b2 == '0' ||
+		b2 == '0') && (b3 == '0' || b3 == '0') && (thirdcells[0].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[0].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+	if ((b1 == '0' || b1 == '0') && (b4 == '0' ||
+		b4 == '0') && (b7 == '0' || b7 == '0') && (thirdcells[1].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[1].status = 1;
+		document.getElementById('print').innerHTML = flags();			
+	}
+	if ((b7 == '0' || b7 == '0') && (b8 == '0' ||
+		b8 == '0') && (b9 == '0' || b9 == '0') && (thirdcells[2].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[2].status = 1;
+		document.getElementById('print').innerHTML = flags();			
+	}
+	if ((b3 == '0' || b3 == '0') && (b6 == '0' ||
+		b6 == '0') && (b9 == '0' || b9 == '0') && (thirdcells[3].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[3].status = 1;
+		document.getElementById('print').innerHTML = flags();			
+	}
+	if ((b1 == '0' || b1 == '0') && (b5 == '0' ||
+		b5 == '0') && (b9 == '0' || b9 == '0') && (thirdcells[4].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[4].status = 1;
+		document.getElementById('print').innerHTML = flags();			
+	}
+	if ((b3 == '0' || b3 == '0') && (b5 == '0' ||
+		b5 == '0') && (b7 == '0' || b7 == '0') && (thirdcells[5].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[5].status = 1;
+		document.getElementById('print').innerHTML = flags();			
+	}
+	if ((b2 == '0' || b2 == '0') && (b5 == '0' ||
+		b5 == '0') && (b8 == '0' || b8 == '0') && (thirdcells[6].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[6].status = 1;
+		document.getElementById('print').innerHTML = flags();			
+	}
+	if ((b4 == '0' || b4 == '0') && (b5 == '0' ||
+		b5 == '0') && (b6 == '0' || b6 == '0') && (thirdcells[7].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[7].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}	
+
+	if ((b4 == '0' || b4 == '0') && (b7 == '0' ||
+		b7 == '0') && (b10 == '0' || b10 == '0') && (thirdcells[8].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[8].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b5 == '0' || b5 == '0') && (b8 == '0' ||
+		b8 == '0') && (b11 == '0' || b11 == '0') && (thirdcells[9].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[9].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b6 == '0' || b6 == '0') && (b9 == '0' ||
+		b9 == '0') && (b12 == '0' || b12 == '0') && (thirdcells[10].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[10].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b13 == '0' || b13 == '0') && (b14 == '0' ||
+		b14 == '0') && (b15 == '0' || b15 == '0') && (thirdcells[11].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[11].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b14 == '0' || b14 == '0') && (b15 == '0' ||
+		b15 == '0') && (b16 == '0' || b16 == '0') && (thirdcells[12].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[12].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b10 == '0' || b10 == '0') && (b11 == '0' ||
+		b11 == '0') && (b12 == '0' || b12 == '0') && (thirdcells[13].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[13].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b11 == '0' || b11 == '0') && (b12 == '0' ||
+		b12 == '0') && (b16 == '0' || b16 == '0') && (thirdcells[14].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[14].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b8 == '0' || b8 == '0') && (b9 == '0' ||
+		b9 == '0') && (b15 == '0' || b15 == '0') && (thirdcells[15].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[15].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b5 == '0' || b5 == '0') && (b6 == '0' ||
+		b6 == '0') && (b14 == '0' || b14 == '0') && (thirdcells[16].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[16].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b2 == '0' || b2 == '0') && (b3 == '0' ||
+		b3 == '0') && (b13 == '0' || b13 == '0') && (thirdcells[17].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[17].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b10 == '0' || b10 == '0') && (b8 == '0' ||
+		b8 == '0') && (b6 == '0' || b6 == '0') && (thirdcells[18].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[18].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b11 == '0' || b11 == '0') && (b9 == '0' ||
+		b9 == '0') && (b14 == '0' || b14 == '0') && (thirdcells[19].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[19].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b5 == '0' || b5 == '0') && (b9 == '0' ||
+		b9 == '0') && (b16 == '0' || b16 == '0') && (thirdcells[20].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[20].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+
+	if ((b4 == '0' || b4 == '0') && (b8 == '0' ||
+		b8 == '0') && (b12 == '0' || b12 == '0') && (thirdcells[21].status != 1)) {
+		localStorage.score0 = parseInt(localStorage.score0 || 0) +3;
+		score_list(0,'+3');
+		thirdcells[21].status = 1;
+		document.getElementById('print').innerHTML = flags();		
+	}
+	
 	// Checking of Player 0 finsh
 	// Here, Checking about Tie
 	else if ((b1 == 'X' || b1 == '0') && (b2 == 'X'
