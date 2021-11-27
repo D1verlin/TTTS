@@ -12,39 +12,21 @@
 
 <main id="settings">
 	<header>
-	<h1 id="version"></h1> <!-- CURRENT VERSION -->
-	<a href="https://github.com/D1verlin/TTTS/wiki"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64zm32 664c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96z" fill="currentColor"/></svg></a>
+	<div class="dropdown">
+		<h2 onclick="FunDropdown()" class="dropbtn">Default ▼</h2>
+		<div id="myDropdown" class="dropdown-content">
+			<a href="classic.html">Classic</a>
+			<a href="random_coef.html">Random coefficient</a>
+			<a href="large_area.html">Large area</a>
+			<a href="time_limit.html">Time limit</a>
+		</div>
+	</div>
+	<div class="info">
+		<h1>TTTS</h1>
+		<h3 id="version"></h3> <!-- CURRENT VERSION -->
+	</div>
+	<a class="btn-info" href="https://github.com/D1verlin/TTTS/wiki"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64zm32 664c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96z" fill="currentColor"/></svg></a>
 </header>
-<div class="gamemode">
-	<h2>Game modes:</h2>
-<div class="wrapper">
- <input type="radio" onclick="gamemods_check()" name="gamemods" id="option-1" checked>
- <input type="radio" onclick="gamemods_check()" name="gamemods" id="option-2">
- <input type="radio" onclick="gamemods_check()" name="gamemods" id="option-3">
- <input type="radio" onclick="gamemods_check()" name="gamemods" id="option-4">
- <input type="radio" onclick="gamemods_check()" name="gamemods" id="option-5">
-   <label for="option-1" class="option option-1">
-     <div class="dot"></div>
-      <span>Default</span>
-      </label>
-   <label for="option-2" class=" option option-2">
-     <div class="dot"></div>
-      <span>Classic</span>
-   </label>
-   <label for="option-3" class=" option option-3">
-     <div class="dot"></div>
-      <span>Random coefficient</span>
-   </label>
-   <label for="option-4" class=" option option-4">
-     <div class="dot"></div>
-      <span>Large area</span>
-   </label>
-   <label for="option-5" class=" option option-5">
-     <div class="dot"></div>
-      <span>Time limit</span>
-   </label>
-</div>
-</div>
 <div class="grid">
 <div class="rounds">
 	<h2>Rounds:</h2>
@@ -186,27 +168,6 @@
 			three.classList.remove("btn-active");
 			four.classList.add("btn-active");
 		}
-	}
-
-
-	function gamemods_check() {
-	let gamemods = document.getElementsByName('gamemods');
-	if (gamemods[0].checked === true) {
-		
-
-	}
-	if (gamemods[1].checked === true) {
-		window.location = 'classic.html';
-	}
-	if (gamemods[2].checked === true) {
-		window.location = 'random_coef.html';
-	}
-	if (gamemods[3].checked === true) {
-		window.location = 'large_area.html';
-	}	
-	if (gamemods[4].checked === true) {
-		window.location = 'time_limit.html';
-	}
 	}
 
 </script>
