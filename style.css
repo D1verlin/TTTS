@@ -618,10 +618,109 @@ input[type="radio"]{
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
+/* Guide.html */
+
+.g_link {
+  padding: 10px 12px 10px 12px;
+  border: var(--border-default);
+  border-radius: 8px;
+}
+
+.g_link:hover {
+  color: var(--bg-secondry);
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.g_container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.g_card {
+  padding: 15px 10px 20px 10px;
+  background: var(--bg-secondry);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+}
+
+.g_card .top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.g_card .top h2 {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.g_card .content nav.center {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 250px;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.g_card .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.g_block {
+  width: 55px;
+  height: 55px;
+  border: var(--border-default);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transition: 0.3s; 
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 4px 6px 4px 6px;
+  border-radius: 29px;
+  color: var(--white);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  font-size: 12px;
+}
+
+#tag_mode {
+  background: var(--secondry-color);
+}
+
+#uv_guide h1 {
+  margin-top: 20px;
+}
+
+/* Guide.html */
+
 @media screen and (min-width: 768px) {
 	.grid {
 		flex-direction: row;
 	}
+  .g_container {
+    flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 470px) {
