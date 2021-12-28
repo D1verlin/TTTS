@@ -1,6 +1,3 @@
-// TO-DO: Animations all block;
-// Sample In << TestRoom/rwanim/ >>
-
 let one = document.querySelectorAll("#one");
 let two = document.querySelectorAll("#two");
 let three = document.querySelectorAll("#three");
@@ -87,6 +84,41 @@ function Fourth() {
 	window.setTimeout(Fourth_04,clock+clock+clock+clock);
 	window.setTimeout(Fourth,clock+clock+clock+clock+clock);
 }
+
+// Sort
+
+let sort_btn = document.querySelectorAll("#sort_btn");
+let comb = document.querySelector("#combinations");
+let sett = document.querySelector("#settings");
+
+
+
+/* 0 - Select all 1 - Combinations 2 - Settings */
+
+sort_btn[0].onclick = function() {
+	sort_btn[0].classList.add("sort-active");
+	sort_btn[1].classList.remove("sort-active");
+	sort_btn[2].classList.remove("sort-active");
+	comb.style.display = "block";
+	sett.style.display = "block";
+}
+
+sort_btn[1].onclick = function() {
+	sort_btn[0].classList.remove("sort-active");
+	sort_btn[1].classList.add("sort-active");
+	sort_btn[2].classList.remove("sort-active");	
+	comb.style.display = "block";
+	sett.style.display = "none";
+}
+
+sort_btn[2].onclick = function() {
+	sort_btn[0].classList.remove("sort-active");
+	sort_btn[1].classList.remove("sort-active");
+	sort_btn[2].classList.add("sort-active");	
+	comb.style.display = "none";
+	sett.style.display = "block";
+}
+
 
 window.onload = function() {
 	Triple();
