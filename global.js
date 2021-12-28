@@ -1,5 +1,5 @@
 
-let version = "1.0.8";
+let version = "1.0.9";
 
 let header = document.querySelector('#version');
 

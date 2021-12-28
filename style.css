@@ -764,11 +764,6 @@ div.sort button:hover {
     border-color: var(--primary-color);
 }
 
-.sort-active {
-    color: var(--bg-secondry) !important;
-    background: var(--primary-color)!important;
-    border-color: var(--primary-color)!important;
-}
 
 /* Guide.html */
 

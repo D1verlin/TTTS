@@ -96,25 +96,25 @@ let sett = document.querySelector("#settings");
 /* 0 - Select all 1 - Combinations 2 - Settings */
 
 sort_btn[0].onclick = function() {
-	sort_btn[0].classList.add("sort-active");
-	sort_btn[1].classList.remove("sort-active");
-	sort_btn[2].classList.remove("sort-active");
+	sort_btn[0].classList.add("btn-active");
+	sort_btn[1].classList.remove("btn-active");
+	sort_btn[2].classList.remove("btn-active");
 	comb.style.display = "block";
 	sett.style.display = "block";
 }
 
 sort_btn[1].onclick = function() {
-	sort_btn[0].classList.remove("sort-active");
-	sort_btn[1].classList.add("sort-active");
-	sort_btn[2].classList.remove("sort-active");	
+	sort_btn[0].classList.remove("btn-active");
+	sort_btn[1].classList.add("btn-active");
+	sort_btn[2].classList.remove("btn-active");	
 	comb.style.display = "block";
 	sett.style.display = "none";
 }
 
 sort_btn[2].onclick = function() {
-	sort_btn[0].classList.remove("sort-active");
-	sort_btn[1].classList.remove("sort-active");
-	sort_btn[2].classList.add("sort-active");	
+	sort_btn[0].classList.remove("btn-active");
+	sort_btn[1].classList.remove("btn-active");
+	sort_btn[2].classList.add("btn-active");	
 	comb.style.display = "none";
 	sett.style.display = "block";
 }
