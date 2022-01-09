@@ -39,14 +39,14 @@ function Triple_08() {Clear(one);Green(one,7);Green(one,10);Green(one,13);}
 function Triple() {
 	Clear(one);
 	window.setTimeout(Triple_01,clock);
-	window.setTimeout(Triple_02,clock+clock);
-	window.setTimeout(Triple_03,clock+clock+clock);
-	window.setTimeout(Triple_04,clock+clock+clock+clock);
-	window.setTimeout(Triple_05,clock+clock+clock+clock+clock);
-	window.setTimeout(Triple_06,clock+clock+clock+clock+clock+clock);
-	window.setTimeout(Triple_07,clock+clock+clock+clock+clock+clock+clock);
-	window.setTimeout(Triple_08,clock+clock+clock+clock+clock+clock+clock+clock);
-	window.setTimeout(Triple,clock+clock+clock+clock+clock+clock+clock+clock+clock);
+	window.setTimeout(Triple_02,clock*2);
+	window.setTimeout(Triple_03,clock*3);
+	window.setTimeout(Triple_04,clock*4);
+	window.setTimeout(Triple_05,clock*5);
+	window.setTimeout(Triple_06,clock*6);
+	window.setTimeout(Triple_07,clock*7);
+	window.setTimeout(Triple_08,clock*8);
+	window.setTimeout(Triple,clock*9);
 }
 
 function Double_01() {Void_3x3(two);Red(two,0);Red(two,4);}
@@ -61,14 +61,14 @@ function Double_08() {Clear(two);Green(two,7);Green(two,10);}
 function Double() {
 	Clear(two);
 	window.setTimeout(Double_01,clock);
-	window.setTimeout(Double_02,clock+clock);
-	window.setTimeout(Double_03,clock+clock+clock);
-	window.setTimeout(Double_04,clock+clock+clock+clock);
-	window.setTimeout(Double_05,clock+clock+clock+clock+clock);
-	window.setTimeout(Double_06,clock+clock+clock+clock+clock+clock);
-	window.setTimeout(Double_07,clock+clock+clock+clock+clock+clock+clock);
-	window.setTimeout(Double_08,clock+clock+clock+clock+clock+clock+clock+clock);
-	window.setTimeout(Double,clock+clock+clock+clock+clock+clock+clock+clock+clock);
+	window.setTimeout(Double_02,clock*2);
+	window.setTimeout(Double_03,clock*3);
+	window.setTimeout(Double_04,clock*4);
+	window.setTimeout(Double_05,clock*5);
+	window.setTimeout(Double_06,clock*6);
+	window.setTimeout(Double_07,clock*7);
+	window.setTimeout(Double_08,clock*8);
+	window.setTimeout(Double,clock*9);
 }
 
 function Fourth_01() {Red(three,0);Red(three,4);Red(three,8);Red(three,12);}
@@ -79,44 +79,62 @@ function Fourth_04() {Clear(three);Green(three,3);Green(three,6);Green(three,9);
 function Fourth() {
 	Clear(three);
 	window.setTimeout(Fourth_01,clock);
-	window.setTimeout(Fourth_02,clock+clock);
-	window.setTimeout(Fourth_03,clock+clock+clock);
-	window.setTimeout(Fourth_04,clock+clock+clock+clock);
-	window.setTimeout(Fourth,clock+clock+clock+clock+clock);
+	window.setTimeout(Fourth_02,clock*2);
+	window.setTimeout(Fourth_03,clock*3);
+	window.setTimeout(Fourth_04,clock*4);
+	window.setTimeout(Fourth,clock*5);
 }
 
 // Sort
 
 let sort_btn = document.querySelectorAll("#sort_btn");
+
 let comb = document.querySelector("#combinations");
 let sett = document.querySelector("#settings");
+let gam = document.querySelector("#gamemodes");
 
 
 
-/* 0 - Select all 1 - Combinations 2 - Settings */
+/* 0 - Select all 1 - Combinations 2 - Settings 3 - Gamemodes */
 
 sort_btn[0].onclick = function() {
 	sort_btn[0].classList.add("btn-active");
 	sort_btn[1].classList.remove("btn-active");
 	sort_btn[2].classList.remove("btn-active");
+	sort_btn[3].classList.remove("btn-active");
 	comb.style.display = "block";
 	sett.style.display = "block";
+	gam.style.display = "block";
 }
 
 sort_btn[1].onclick = function() {
 	sort_btn[0].classList.remove("btn-active");
 	sort_btn[1].classList.add("btn-active");
-	sort_btn[2].classList.remove("btn-active");	
+	sort_btn[2].classList.remove("btn-active");
+	sort_btn[3].classList.remove("btn-active");
 	comb.style.display = "block";
 	sett.style.display = "none";
+	gam.style.display = "none";
 }
 
 sort_btn[2].onclick = function() {
 	sort_btn[0].classList.remove("btn-active");
 	sort_btn[1].classList.remove("btn-active");
-	sort_btn[2].classList.add("btn-active");	
+	sort_btn[2].classList.add("btn-active");
+	sort_btn[3].classList.remove("btn-active");
 	comb.style.display = "none";
 	sett.style.display = "block";
+	gam.style.display = "none";
+}
+
+sort_btn[3].onclick = function() {
+	sort_btn[0].classList.remove("btn-active");
+	sort_btn[1].classList.remove("btn-active");
+	sort_btn[2].classList.remove("btn-active");
+	sort_btn[3].classList.add("btn-active");	
+	comb.style.display = "none";
+	sett.style.display = "none";
+	gam.style.display = "block";
 }
 
 

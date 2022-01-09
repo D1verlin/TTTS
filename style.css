@@ -638,6 +638,7 @@ input[type="radio"]{
   align-items: stretch;
   margin-top: 15px;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .g_card {
@@ -714,6 +715,7 @@ input[type="radio"]{
 
 .col {
     display: flex;
+    width: 100%;
     flex-direction: column;
     padding: 10px;
     gap: 10px;
