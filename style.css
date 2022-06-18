@@ -80,6 +80,8 @@ a {
 body {
 	background:var(--bg);
 	padding: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 header {
