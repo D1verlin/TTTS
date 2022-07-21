@@ -742,6 +742,7 @@ input[type="radio"]{
 
 #uv_guide {
   margin-bottom: 20px;
+  display: block;
 }
 
 .sort {
