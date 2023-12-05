@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TTTS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Fonts/GeometriaFont.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<meta name="theme-color" content="#515B70">
+</head>
+<body>
+
+<main id="settings">
+	<header>
+	<div class="dropdown">
+		<h2 onclick="FunDropdown()" class="dropbtn">Classic ▼</h2>
+		<div id="myDropdown" class="dropdown-content">
+			<a href="index.html">Default</a>
+			<a href="random_coef.html">Random coefficient</a>
+			<a href="large_area.html">Large area</a>
+			<a href="time_limit.html">Time limit</a>
+		</div>
+	</div>
+	<div class="info">
+		<h1>TTTS</h1>
+		<h3 id="version"></h3> <!-- CURRENT VERSION -->
+	</div>
+	<a class="btn-info" href="guide.html"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64zm32 664c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96z" fill="currentColor"/></svg></a>
+</header>
+<div class="grid">
+<div class="rounds">
+	<h2>Rounds:</h2>
+	<ul>
+	<button onclick="rounds_select(1);btn_checker(1)">1</button>
+	<button onclick="rounds_select(5);btn_checker(5)">5</button>
+	<button onclick="rounds_select(10);btn_checker(10)">10</button>
+	<button onclick="rounds_select(20);btn_checker(20)">20</button>
+	</ul>
+	<input type="number" id="rounds" name="rounds" min="1" value="1">
+</div>
+<div class="area not-ready">
+	<h2>Area:</h2>
+	<ul>
+	<button class="btn-active" onclick="area_select(1);btn_checker()">4x4</button>
+	</ul>
+</div>
+<div class="time not-ready">
+	<h2>Time(s) per turn:</h2>
+	<input type="number" id="quantity" name="time" min="1" value="1">
+</div>
+<div class="coefficient not-ready">
+	<h2>Coefficient:</h2>
+	<ul>
+	<span><h3>Min</h3>
+	<input type="number" id="quantity" name="mincof" min="1" value="1"></span>
+	<span><h3>Max</h3>
+	<input type="number" id="quantity" name="maxcof" min="1" value="10"></span></ul>
+</div>
+</div>
+<div class="other_s">
+	<h2>Other settings:</h2>
+	<nav>
+	<label class="other_radio">Auto-Round
+  <input type="checkbox" class="other_elm" id="auto_round" onclick="checkbox_checked()">
+</label>
+	<label class="other_radio">My Turn
+  <input type="checkbox" class="other_elm" id="my_turn" onclick="checkbox_checked()">
+</label>	
+	</nav>
+</div>
+<button id="btn-start" onclick="SwitchLayer(); Start()">Start</button>
+</main>
+<main id="game" class="layer-none">
+	<header>
+	<nav><h1>Player one:</h1><h2 id="scoreX">0</h2></nav>
+	<nav><h1>Player two:</h1><h2 id="score0">0</h2></nav>
+</header>
+	<h1 id="round_score">Round 1</h1>
+	<ul class="box-score" id="scoreX_list">
+
+	</ul>
+		<ul class="box-score" id="score0_list">
+
+	</ul>
+	<nav id="turns"><h1 id="print"></h1></nav>
+	<div class="panels">
+		<!-- 3*3 grid of Boxes -->
+		<input type="text" class="radioButton grid_block" id="b1" onclick=
+			"CheckTurn('b1'); myfunc();" readonly>
+
+		<input type="text" class="radioButton grid_block" id="b2" onclick=
+			"CheckTurn('b2'); myfunc();" readonly>
+
+		<input type="text" class="radioButton grid_block" id="b3" onclick=
+			"CheckTurn('b3'); myfunc();" readonly>
+
+		<input type="text" class="radioButton grid_block" id="b4" onclick=
+			"CheckTurn('b4'); myfunc();" readonly>
+			
+		<input type="text" class="radioButton grid_block" id="b5" onclick=
+			"CheckTurn('b5'); myfunc();" readonly>
+
+		<input type="text" class="radioButton grid_block" id="b6" onclick=
+			"CheckTurn('b6'); myfunc();" readonly>
+
+		<input type="text" class="radioButton grid_block" id="b7" onclick=
+			"CheckTurn('b7'); myfunc();" readonly>
+
+		<input type="text" class="radioButton grid_block" id="b8" onclick=
+			"CheckTurn('b8');myfunc();" readonly>
+
+		<input type="text" class="radioButton grid_block" id="b9" onclick=
+			"CheckTurn('b9');myfunc();" readonly>
+
+		<!-- Grid end here -->
+	</div>
+	<div class="button-group">
+		<button id="btn1" onclick="Reset()" disabled>Reset</button>
+		<button id="btn2" onclick="Next_Round()" disabled>Next Round</button>
+	</div>
+</main>
+<script src="global.js"></script>
+<script id="script" src="classic.js"></script>
+<script>
+		let toggle = 0;
+	function SwitchLayer() {
+		if (toggle === 0) {
+			toggle = 1;
+			document.querySelector('#game').classList.add("layer-flex");
+			document.querySelector('#game').classList.remove("layer-none");
+			document.querySelector('#settings').classList.add("layer-none");
+		} else {
+			toggle = 0;
+			document.querySelector('#settings').classList.add("layer-flex");
+			document.querySelector('#settings').classList.remove("layer-none");
+			document.querySelector('#game').classList.add("layer-none");
+		}
+	}
+	document.querySelector('#rounds').onclick = function() {
+		document.querySelector('.rounds ul button:nth-child(1)').classList.remove("btn-active");
+		document.querySelector('.rounds ul button:nth-child(2)').classList.remove("btn-active");
+		document.querySelector('.rounds ul button:nth-child(3)').classList.remove("btn-active");
+		document.querySelector('.rounds ul button:nth-child(4)').classList.remove("btn-active");
+	}
+	function btn_checker(a) {
+		let first = document.querySelector('.rounds ul button:nth-child(1)');
+		let two = document.querySelector('.rounds ul button:nth-child(2)');
+		let three = document.querySelector('.rounds ul button:nth-child(3)');
+		let four = document.querySelector('.rounds ul button:nth-child(4)');
+		if (a === 1) {
+			first.classList.add("btn-active");
+			two.classList.remove("btn-active");
+			three.classList.remove("btn-active");
+			four.classList.remove("btn-active");
+		} if (a === 5) {
+			first.classList.remove("btn-active");
+			two.classList.add("btn-active");
+			three.classList.remove("btn-active");
+			four.classList.remove("btn-active");
+		} if (a === 10) {
+			first.classList.remove("btn-active");
+			two.classList.remove("btn-active");
+			three.classList.add("btn-active");
+			four.classList.remove("btn-active");
+		} if (a === 20) {
+			first.classList.remove("btn-active");
+			two.classList.remove("btn-active");
+			three.classList.remove("btn-active");
+			four.classList.add("btn-active");
+		}
+	}
+</script>
+</body>
+</html>
